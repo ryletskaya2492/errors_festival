@@ -1,0 +1,121 @@
+@media (max-width: 480px) {
+
+    .schedule {
+        padding: 4vw 0;
+    }
+
+    .schedule__inner {
+        width: 92%;
+    }
+    .schedule__top {
+        height: auto;
+        max-height: none;
+        padding: 5vw 4vw 3vw;
+    }
+
+    .schedule__title {
+        font-size: 12vw;
+        line-height: 1;
+        text-align: left;
+        margin: 0;
+    }
+
+    .schedule__bottom {
+        flex-direction: column;
+        height: auto;
+        max-height: none;
+    }
+
+    .schedule__festival {
+        flex: none;
+        padding: 5vw 4vw 4vw;
+        border-right: none;
+        border-bottom: 1px solid #ffffff;
+        align-items: flex-start;
+    }
+
+    .festival-text {
+        font-size: 9vw;
+        line-height: 1;
+    }
+
+    .schedule__binary {
+        flex: none;
+        border-right: none;
+        border-bottom: 1px solid #ffffff;
+        align-items: flex-start;
+        justify-content: flex-start;
+        aspect-ratio: 1 / 1;
+    }
+
+    .binary {
+        padding: 3vw;
+        gap: 1vw;
+    }
+
+    .binary__row {
+        line-height: 0.9;
+    }
+
+    .b {
+        font-size: 5.7vw;
+        line-height: 1;
+    }
+
+    .schedule__logo {
+        flex: none;
+        width: 100%;
+        min-height: 90vw;      
+        background: #e5e5e5;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 76vw;          
+        height: 76vw;
+        background: #000;
+        transform: translate(-50%, -50%) rotate(12deg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+
+    .t {
+        font-family: Helvetica, Arial, sans-serif;
+        font-weight: 700;
+        font-size: 33vw;      
+        line-height: 1;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2vw;
+        transform: translate(24%, -8%); 
+    }
+
+    .oo {
+        transform: rotate(3deg);
+    }
+
+    .ps {
+        transform: rotate(92deg) translateY(-18%);
+    }
+    .mrow {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .err__in {
+        height: 53px;
+    }
+
+    .err__line {
+        font-size: 25px;
+    }
+}

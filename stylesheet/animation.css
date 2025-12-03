@@ -1,0 +1,310 @@
+/* ===== АНИМАЦИИ ЗАГОЛОВКА ===== */
+
+.schedule__title {
+    position: relative;
+    animation: title_moving 2.8s ease-in-out infinite;
+    will-change: transform;
+}
+
+@keyframes title_moving {
+    0% {
+        transform: translate(-10vw, -4vw);
+    }
+
+    25% {
+        transform: translate(10vw, -1vw);
+    }
+
+    50% {
+        transform: translate(12vw, 6vw);
+    }
+
+    75% {
+        transform: translate(-9vw, 4vw);
+    }
+
+    100% {
+        transform: translate(-10vw, -4vw);
+    }
+}
+
+/* ===== ПАДЕНИЕ ТЕКСТА "ФЕСТИВАЛЯ ЦИФРОВЫХ ОШИБОК" ===== */
+
+.festival-text.fall {
+    position: relative;
+}
+
+.festival-text.fall .ch {
+    position: relative;
+    display: inline-block;
+}
+
+/* какие строки анимируются при :hover */
+.festival-text.fall:hover .row:nth-child(1) .ch {
+    animation: fallRow1 0.9s ease-out forwards;
+}
+
+.festival-text.fall:hover .row:nth-child(2) .ch {
+    animation: fallRow2 0.9s ease-out forwards;
+}
+
+.festival-text.fall:hover .row:nth-child(3) .ch {
+    animation: fallRow3 0.9s ease-out forwards;
+}
+
+/* траектории для трёх строк */
+
+@keyframes fallRow1 {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(0.05em, 2.5em) rotate(10deg);
+    }
+
+    70% {
+        transform: translate(-0.1em, 4.5em) rotate(20deg);
+    }
+
+    100% {
+        transform: translate(0.2em, 6.5em) rotate(28deg);
+    }
+}
+
+@keyframes fallRow2 {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(0.04em, 2.0em) rotate(8deg);
+    }
+
+    70% {
+        transform: translate(-0.08em, 3.5em) rotate(18deg);
+    }
+
+    100% {
+        transform: translate(0.15em, 5.3em) rotate(24deg);
+    }
+}
+
+@keyframes fallRow3 {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(0.03em, 1.2em) rotate(6deg);
+    }
+
+    70% {
+        transform: translate(-0.06em, 2.4em) rotate(14deg);
+    }
+
+    100% {
+        transform: translate(0.12em, 4.0em) rotate(20deg);
+    }
+}
+
+/* рандомные задержки — буквы падают по очереди */
+
+.festival-text.fall:hover .row:nth-child(1) .ch:nth-child(1) {
+    animation-delay: 0.27s;
+}
+
+.festival-text.fall:hover .row:nth-child(1) .ch:nth-child(2) {
+    animation-delay: 0.05s;
+}
+
+.festival-text.fall:hover .row:nth-child(1) .ch:nth-child(3) {
+    animation-delay: 0.38s;
+}
+
+.festival-text.fall:hover .row:nth-child(1) .ch:nth-child(4) {
+    animation-delay: 0.12s;
+}
+
+.festival-text.fall:hover .row:nth-child(1) .ch:nth-child(5) {
+    animation-delay: 0.45s;
+}
+
+.festival-text.fall:hover .row:nth-child(1) .ch:nth-child(6) {
+    animation-delay: 0.19s;
+}
+
+.festival-text.fall:hover .row:nth-child(1) .ch:nth-child(7) {
+    animation-delay: 0.52s;
+}
+
+.festival-text.fall:hover .row:nth-child(1) .ch:nth-child(8) {
+    animation-delay: 0.08s;
+}
+
+.festival-text.fall:hover .row:nth-child(1) .ch:nth-child(9) {
+    animation-delay: 0.33s;
+}
+
+.festival-text.fall:hover .row:nth-child(2) .ch:nth-child(1) {
+    animation-delay: 0.41s;
+}
+
+.festival-text.fall:hover .row:nth-child(2) .ch:nth-child(2) {
+    animation-delay: 0.16s;
+}
+
+.festival-text.fall:hover .row:nth-child(2) .ch:nth-child(3) {
+    animation-delay: 0.57s;
+}
+
+.festival-text.fall:hover .row:nth-child(2) .ch:nth-child(4) {
+    animation-delay: 0.23s;
+}
+
+.festival-text.fall:hover .row:nth-child(2) .ch:nth-child(5) {
+    animation-delay: 0.49s;
+}
+
+.festival-text.fall:hover .row:nth-child(2) .ch:nth-child(6) {
+    animation-delay: 0.30s;
+}
+
+.festival-text.fall:hover .row:nth-child(2) .ch:nth-child(7) {
+    animation-delay: 0.64s;
+}
+
+.festival-text.fall:hover .row:nth-child(2) .ch:nth-child(8) {
+    animation-delay: 0.11s;
+}
+
+.festival-text.fall:hover .row:nth-child(3) .ch:nth-child(1) {
+    animation-delay: 0.22s;
+}
+
+.festival-text.fall:hover .row:nth-child(3) .ch:nth-child(2) {
+    animation-delay: 0.51s;
+}
+
+.festival-text.fall:hover .row:nth-child(3) .ch:nth-child(3) {
+    animation-delay: 0.17s;
+}
+
+.festival-text.fall:hover .row:nth-child(3) .ch:nth-child(4) {
+    animation-delay: 0.59s;
+}
+
+.festival-text.fall:hover .row:nth-child(3) .ch:nth-child(5) {
+    animation-delay: 0.36s;
+}
+
+.festival-text.fall:hover .row:nth-child(3) .ch:nth-child(6) {
+    animation-delay: 0.07s;
+}
+
+/* ===== БИНАРНОЕ МИГАНИЕ 0/1 ===== */
+
+.b {
+    position: relative;
+    /* нужно для ::after */
+}
+
+.b0::after,
+.b1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    /* слой с обратной цифрой по умолчанию скрыт */
+}
+
+.b0::after {
+    content: "1";
+}
+
+.b1::after {
+    content: "0";
+}
+
+@keyframes bitFlip {
+
+    0%,
+    35% {
+        opacity: 0;
+    }
+
+    /* видна исходная цифра */
+    36%,
+    65% {
+        opacity: 1;
+    }
+
+    /* поверх — обратная */
+    66%,
+    100% {
+        opacity: 0;
+    }
+
+    /* снова исходная */
+}
+
+.binary .b::after {
+    animation-name: bitFlip;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+}
+
+.binary__row .b:nth-child(3n)::after {
+    animation-delay: 0.0s;
+}
+
+.binary__row .b:nth-child(3n+1)::after {
+    animation-delay: 0.4s;
+}
+
+.binary__row .b:nth-child(3n+2)::after {
+    animation-delay: 0.8s;
+}
+
+/* ===== РОТАЦИЯ ЛОГОТИПА OOPS ===== */
+
+@keyframes logo-spin {
+    from {
+        transform: translate(-50%, -50%) rotate(12deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(372deg);
+    }
+
+    /* 360 + 12 */
+}
+
+.logo {
+    animation: logo-spin 14s linear infinite;
+}
+
+/* ===== АНИМАЦИЯ БЕГУЩЕЙ СТРОКИ ===== */
+
+.err__line {
+    animation: err-move 25s linear infinite;
+}
+
+/* исчезновение части текста при наведении */
+.err__line .er1:hover {
+    opacity: 0;
+    transition: opacity 0.25s ease-out;
+}
+
+@keyframes err-move {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
