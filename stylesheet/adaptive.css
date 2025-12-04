@@ -128,7 +128,7 @@
     }
 
 
-    .lec_cell+.lec_cell {
+    .lec_cell {
         border-left: 0.22vw solid #fff;
 
     }

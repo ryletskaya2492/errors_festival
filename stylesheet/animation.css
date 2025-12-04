@@ -260,7 +260,7 @@
     animation-delay: 0.8s;
 }
 
-/* ===== РОТАЦИЯ ЛОГОТИПА OOPS ===== */
+/* логотип поворот */
 
 @keyframes logo-spin {
     from {
