@@ -108,7 +108,61 @@
     .mrow {
         display: block;
     }
-}
+    .lec {
+        margin-top: 8vw;
+        padding-left: 4vw;
+        padding-right: 4vw;
+    }
+
+    .lec_row {
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .lec_cell {
+        flex: 0 0 50%;
+        width: 50%;
+        padding: 4vw;
+        aspect-ratio: 1 / 1;
+
+    }
+
+
+    .lec_cell+.lec_cell {
+        border-left: 0.22vw solid #fff;
+
+    }
+
+    .lec_cell:nth-child(1),
+    .lec_cell:nth-child(2) {
+        border-bottom: 0.22vw solid #fff;
+    }
+
+    .lec_title {
+        font-size: 6vw;
+    }
+
+    .lec_err_title {
+        font-size: 9.5vw;
+        line-height: 1.05;
+    }
+
+    .lec_body {
+        font-size: 3vw;
+        line-height: 1.35;
+    }
+
+    .lec_char_img {
+        max-width: 85%;
+        max-height: 85%;
+    }
+    .lec_one {
+        font-size: 30vw;
+        left: 1vw;
+        bottom: 10vw;
+    }
+
+ }
 
 @media (max-width: 768px) {
     .err__in {

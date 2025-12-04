@@ -1,9 +1,8 @@
-/* ===== АНИМАЦИИ ЗАГОЛОВКА ===== */
+/* РАСПИСАНИЕ */
 
 .schedule__title {
     position: relative;
     animation: title_moving 2.8s ease-in-out infinite;
-    will-change: transform;
 }
 
 @keyframes title_moving {
@@ -28,18 +27,15 @@
     }
 }
 
-/* ===== ПАДЕНИЕ ТЕКСТА "ФЕСТИВАЛЯ ЦИФРОВЫХ ОШИБОК" ===== */
-
+/*падающий текст фестиваля*/
 .festival-text.fall {
     position: relative;
 }
 
 .festival-text.fall .ch {
     position: relative;
-    display: inline-block;
 }
 
-/* какие строки анимируются при :hover */
 .festival-text.fall:hover .row:nth-child(1) .ch {
     animation: fallRow1 0.9s ease-out forwards;
 }
@@ -108,7 +104,6 @@
     }
 }
 
-/* рандомные задержки — буквы падают по очереди */
 
 .festival-text.fall:hover .row:nth-child(1) .ch:nth-child(1) {
     animation-delay: 0.27s;
@@ -202,11 +197,10 @@
     animation-delay: 0.07s;
 }
 
-/* ===== БИНАРНОЕ МИГАНИЕ 0/1 ===== */
+/* бинарные ряды */
 
 .b {
     position: relative;
-    /* нужно для ::after */
 }
 
 .b0::after,
@@ -230,25 +224,22 @@
 }
 
 @keyframes bitFlip {
-
+/* туда сюда/исходная/обратная */
     0%,
     35% {
         opacity: 0;
     }
 
-    /* видна исходная цифра */
     36%,
     65% {
         opacity: 1;
     }
 
-    /* поверх — обратная */
     66%,
     100% {
         opacity: 0;
     }
 
-    /* снова исходная */
 }
 
 .binary .b::after {
@@ -279,21 +270,19 @@
     to {
         transform: translate(-50%, -50%) rotate(372deg);
     }
-
-    /* 360 + 12 */
 }
 
 .logo {
     animation: logo-spin 14s linear infinite;
 }
 
-/* ===== АНИМАЦИЯ БЕГУЩЕЙ СТРОКИ ===== */
+/* бегущая строка*/
 
 .err__line {
     animation: err-move 25s linear infinite;
 }
 
-/* исчезновение части текста при наведении */
+/* исчезновение части текста*/
 .err__line .er1:hover {
     opacity: 0;
     transition: opacity 0.25s ease-out;
@@ -306,5 +295,163 @@
 
     100% {
         transform: translateX(-50%);
+    }
+}
+
+/* глитч типо */
+.lec_glitch .lec_title {
+    animation: lec-glitch-title 0.8s steps(2, end) infinite;
+}
+
+/* тоже глитч на единицу */
+.lec_glitch .lec_one {
+    animation: lec-glitch-one 0.8s steps(2, end) infinite;
+}
+
+@keyframes lec-glitch-title {
+    0% {
+        transform: translate(0, 0);
+        text-shadow: 0 0 0 #fff;
+    }
+
+    10% {
+        transform: translate(-1px, 1px);
+        text-shadow: -2px 0 #ff00ff, 2px 0 #00ffff;
+    }
+
+    20% {
+        transform: translate(2px, -1px);
+        text-shadow: 2px 0 #ff00ff, -2px 0 #00ffff;
+    }
+
+    30% {
+        transform: translate(-1px, -2px);
+        text-shadow: -2px 0 #ff00ff, 2px 0 #00ffff;
+    }
+
+    40% {
+        transform: translate(1px, 2px);
+        text-shadow: 2px 0 #ff00ff, -2px 0 #00ffff;
+    }
+
+    50% {
+        transform: translate(0, 0);
+        text-shadow: 0 0 0 #fff;
+    }
+
+    60% {
+        transform: translate(1px, -1px);
+        text-shadow: 2px 0 #ff00ff, -2px 0 #00ffff;
+    }
+
+    70% {
+        transform: translate(-2px, 1px);
+        text-shadow: -2px 0 #ff00ff, 2px 0 #00ffff;
+    }
+
+    80% {
+        transform: translate(1px, 1px);
+        text-shadow: 2px 0 #ff00ff, -2px 0 #00ffff;
+    }
+
+    90% {
+        transform: translate(-1px, 0);
+        text-shadow: -2px 0 #ff00ff, 2px 0 #00ffff;
+    }
+
+    100% {
+        transform: translate(0, 0);
+        text-shadow: 0 0 0 #fff;
+    }
+}
+
+
+/* для единицы */
+@keyframes lec-glitch-one {
+    0% {
+        transform: rotate(90deg) translate(0, 0);
+        text-shadow: 0  #fff;
+    }
+
+    10% {
+        transform: rotate(90deg) translate(-1px, 1px);
+        text-shadow: -3px 0 #ff00ff, 3px 0 #00ffff;
+    }
+
+    20% {
+        transform: rotate(90deg) translate(2px, -1px);
+        text-shadow: 3px 0 #ff00ff, -3px 0 #00ffff;
+    }
+
+    30% {
+        transform: rotate(90deg) translate(-1px, -2px);
+        text-shadow: -3px 0 #ff00ff, 3px 0 #00ffff;
+    }
+
+    40% {
+        transform: rotate(90deg) translate(1px, 2px);
+        text-shadow: 3px 0 #ff00ff, -3px 0 #00ffff;
+    }
+
+    50% {
+        transform: rotate(90deg) translate(0, 0);
+        text-shadow: 0 #fff;
+    }
+
+    60% {
+        transform: rotate(90deg) translate(1px, -1px);
+        text-shadow: 3px 0 #ff00ff, -3px 0 #00ffff;
+    }
+
+    70% {
+        transform: rotate(90deg) translate(-2px, 1px);
+        text-shadow: -3px 0 #ff00ff, 3px 0 #00ffff;
+    }
+
+    80% {
+        transform: rotate(90deg) translate(1px, 1px);
+        text-shadow: 3px 0 #ff00ff, -3px 0 #00ffff;
+    }
+
+    90% {
+        transform: rotate(90deg) translate(-1px, 0);
+        text-shadow: -3px 0 #ff00ff, 3px 0 #00ffff;
+    }
+
+    100% {
+        transform: rotate(90deg) translate(0, 0);
+        text-shadow: 0 0 0 #fff;
+    }
+}
+.lec_char_img {
+    animation: charPulse 3.6s ease-in-out infinite;
+    transform-origin: center bottom;
+}
+@keyframes charPulse {
+    0% {
+        transform: scale(1);
+    }
+    10% {
+        transform: scale(1.25) rotate(-2deg);
+    }
+
+    18% {
+        transform: scale(0.9) rotate(1deg);
+    }
+
+    28% {
+        transform: scale(1.15) rotate(-0.8deg);
+    }
+
+    38% {
+        transform: scale(0.95);
+    }
+
+    60% {
+        transform: scale(1.12);
+    }
+
+    100% {
+        transform: scale(1);
     }
 }

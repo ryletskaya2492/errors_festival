@@ -1,10 +1,17 @@
 * {
     box-sizing: border-box;
 }
+@font-face {
+    font-family: "HelveticaBold";
+    src: url("./fonts/HelveticaBold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
 
 html {
     scroll-behavior: smooth;
 }
+
 
 body {
     margin: 0;
@@ -17,13 +24,11 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
-/* рамка всех больших блоков */
 .frame {
     border: 1px solid #ffffff;
 }
 
-/* ===== ПЕРВЫЙ ЭКРАН ===== */
+/* ПЕРВЫЙ ЭКРАН */
 
 .schedule {
     padding: 2.8vw 0;
@@ -34,7 +39,6 @@ body {
 .schedule__inner {
     position: relative;
     width: 94%;
-    max-width: 1357px;
     margin: 0 auto;
     background: #101010;
 }
@@ -58,14 +62,13 @@ body {
     text-align: center;
 }
 
-/* нижняя часть: три колонки */
 .schedule__bottom {
     display: flex;
     height: 23.6vw;
     max-height: 340px;
 }
 
-/* левая колонка: текст */
+
 .schedule__festival {
     flex: 0 0 50%;
     padding: 2.8vw;
@@ -75,7 +78,6 @@ body {
     background: #101010;
     border-right: 1px solid #ffffff;
     overflow: hidden;
-    /* обрезаем падающие буквы */
 }
 
 .festival-text {
@@ -83,11 +85,9 @@ body {
     font-size: 5.55vw;
     font-weight: 400;
     line-height: 0.9;
-    text-transform: lowercase;
-
     display: flex;
     flex-direction: column;
-    gap: 0.25em;
+    gap: 0.4vw;
 }
 
 .festival-text .row {
@@ -98,7 +98,7 @@ body {
     display: inline-block;
 }
 
-/* средняя колонка: бинарный код */
+/* бинарный код */
 
 .schedule__binary {
     flex: 0 0 25%;
@@ -107,7 +107,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 0;
 }
 
 .binary {
@@ -125,8 +124,10 @@ body {
     font-family: "Inter", sans-serif;
     font-weight: 400;
     line-height: 0.85;
-    white-space: nowrap;
+    white-space: nowrap; 
+    /* чтобы не переносилось на новую строку */
     font-size: 0;
+    /* чтобы плотно стояли */
 }
 
 .b {
@@ -137,10 +138,10 @@ body {
 
 .mrow {
     display: none;
-    /* спец-строка только для мобилки, включаешь в adaptive.css */
+    /* спец-строка только для мобилки*/
 }
 
-/* правая колонка: логотип */
+/* логотип */
 
 .schedule__logo {
     flex: 0 0 25%;
@@ -184,16 +185,14 @@ body {
 .ps {
     transform: rotate(92deg) translateY(-20%);
 }
-/* ===== БЕГУЩАЯ СТРОКА — ЛЕЙАУТ ===== */
+/* бегущая строка */
 
 .err {
     margin-top: 0;
-    /* при желании можешь сделать 20px */
 }
 
 .err__in {
     height: 103px;
-    /* как ты просила */
     background: #ffffff;
     display: flex;
     align-items: center;
@@ -203,7 +202,6 @@ body {
 .err__line {
     display: inline-flex;
     white-space: nowrap;
-    font-family: "Fira Code", monospace;
     font-size: 50px;
     font-weight: 400;
     line-height: 1;
@@ -213,4 +211,105 @@ body {
 
 .err__line .er {
     display: inline-block;
+}
+
+.lec {
+    margin-top: 2.8vw;
+    background: #101010;
+    padding-left: 3vw;
+    padding-right: 3vw;
+}
+
+.lec_wrap {
+    background: #101010;
+}
+
+
+/* 2 блок */
+.lec_row {
+    display: flex;
+    width: 100%;
+    height: 22vw;
+    min-height: 18vw;
+}
+
+/* ячейки */
+.lec_cell {
+    flex: 1 1 0;
+    padding: 2.2vw 2.2vw 2.6vw;
+    aspect-ratio: 1 / 1;
+    background: #101010;
+}
+
+/* вертикальные линии между колонками */
+.lec_cell+.lec_cell {
+    border-left: 0.1vw solid #ffffff;
+}
+
+/* текст */
+
+/* ЛЕКЦИЯ*/
+.lec_title {
+    color: #fff;
+    font-size: 3vw;
+    font-weight: 400;
+    line-height: 1.1;
+    text-align: center;
+}
+
+/* ERROR 404 */
+.lec_err_title {
+    margin: 0;
+    color: #fff;
+    font-size: 4vw;
+    font-weight: 400;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.lec_body {
+    margin: 0 0 1vw;
+    color: #fff;
+    font-size: 1.4vw;
+    line-height: 1.1;
+}
+
+/* внутри ячеек */
+.lec_glitch {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* лежащая единица */
+.lec_one {
+    position: absolute;
+    left: 1vw;
+    bottom: 4vw;
+    transform-origin: center bottom;
+    transform: translateX(-50%) rotate(90deg);
+    color: #FFF;
+    font-size: 14vw;
+    font-weight: 400;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.lec_txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* персонаж */
+.lec_char {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lec_char_img {
+    max-width: 70%;
+    max-height: 70%;
+    object-fit: contain;
 }
