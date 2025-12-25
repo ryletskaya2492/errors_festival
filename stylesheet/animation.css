@@ -1069,4 +1069,60 @@
      }
     }
 
+.ex_c2 .ex_bg,
+.ex_c4 .ex_bg,
+.ex_c6 .ex_bg {
+    animation: ex_ph 6s steps(1, end) infinite;
+}
+
+/* чтобы у трёх слотов были разные стартовые кадры */
+.ex_c4 .ex_bg {
+    animation-delay: -2s;
+}
+
+.ex_c6 .ex_bg {
+    animation-delay: -4s;
+}
+
+@keyframes ex_ph {
+    0% {
+        background-image: url("../images/pic1.jpg");
+    }
+
+    20% {
+        background-image: url("../images/pic2.jpg");
+    }
+
+    40% {
+        background-image: url("../images/pic3.jpg");
+    }
+
+    60% {
+        background-image: url("../images/pic4.jpg");
+    }
+
+    80% {
+        background-image: url("../images/pic5.jpg");
+    }
+
+    100% {
+        background-image: url("../images/pic1.jpg");
+    }
+}
+
+.ex_ar {
+    transform-origin: 50% 50%;
+    animation: ex_spin 1.6s linear infinite;
+}
+
+@keyframes ex_spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 

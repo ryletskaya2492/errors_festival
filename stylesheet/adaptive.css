@@ -1,3 +1,17 @@
+@media (max-width: 820px) {
+
+    .ex_t,
+    .text-box2,
+    .mo-lec {
+        font-size: 2.5vw;
+    }
+
+    .lec_body {
+        font-size: 1.5vw;
+
+    }
+}
+
 @media (max-width: 480px) {
 
     .schedule {
@@ -156,7 +170,7 @@
     }
 
     .lec_body {
-        font-size: 3vw;
+        font-size: 2.5vw;
         line-height: 1.35;
     }
 
@@ -507,15 +521,15 @@
         }
     }
         
-    .empty-box::before {
-        width: 220%;
-        transform: rotate(60.6deg);
-    }
+        .empty-box::before {
+            width: 220%;
+            transform: rotate(60.6deg);
+        }
 
-    .empty-box::after {
-        width: 220%;
-        transform: rotate(-60.6deg);
-    }
+        .empty-box::after {
+            width: 220%;
+            transform: rotate(-60.6deg);
+        }
         .reg_i {
             width: 94%;
             min-height: 70vw;
@@ -530,44 +544,90 @@
             width: 18vw;
             height: 18vw;
         }
-            
+
+        .ex_in {
+            width: 100%;
+        }
+        .ex_c {
+            height: 20vw;
+        }
+
+        /* 1 ряд */
+        .ex_c1 {
+            width: 50%;
+        }
+
+        .ex_c2 {
+            width: 50%;
+        }
+
+        /* 2 ряд */
+        .ex_c4 {
+            width: 50%;
+        }
+
+        .ex_c5 {
+            width: 50%;
+        }
+
+        /* 3 ряд */
+        .ex_c7 {
+            width: 100%;
+        }
+
+        /* 4 ряд*/
+        .ex_c3 {
+            width: 100%;
+        }
+
+        /* 5 ряд */
+        .ex_c6 {
+            width: 100%;
+        }
+
+        /* 6 ряд*/
+        .ex_c8 {
+            width: 50%;
+        }
+
+        .ex_c9 {
+            width: 50%;
+        }
+
+        .ex_c2,
+        .ex_c5,
+        .ex_c9 {
+            border-right: none;
+        }
+        .ex_c8,
+        .ex_c9 {
+            border-bottom: none;
+        }
+        .ex_c6 {
+            border-right: 1px solid #fff;
+        }
+
+        .ex_c3 {
+            border-right: 1px solid #fff;
+        }
+
+        .ex_c7 {
+            border-bottom: 1px solid #fff;
+        }
+
+        .ex_tx {
+            font-size: 4vw;
+            padding: 0 6vw;
+        }
+
+        .ex_t {
+            font-size: 3.8vw;
+        }
+
+        .ex_btn {
+            font-size: 3vw;
+            padding: 3.5vw 12vw;
+        }
 }
 
-/* @media (max-width: 768px) { */
-
-    /* .empty {
-        margin-top: 0vw;
-    }
-
-    .empty-box {
-        width: 100%;
-        aspect-ratio: 9 / 16;
-    }
-
-    .empty-box::before,
-    .empty-box::after {
-        width: 180%;
-        height: 1px;
-    }
-
-    /* текст */
-    /* .empty-text {
-        gap: 2vw;
-    } */ 
-
-    /* .type .small .c,
-    .type .big .c {
-        font-size: 4vw;
-        padding: 0.25em 0.18em;
-    }
-    .empty-box::before {
-        width: 220%;
-        transform: rotate(60.6deg);
-    }
-
-    .empty-box::after {
-        width: 220%;
-        transform: rotate(-60.6deg);
-    } */
    
-/* } */

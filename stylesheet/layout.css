@@ -209,7 +209,7 @@ body {
     font-weight: 400;
     line-height: 1;
     text-transform: uppercase;
-    color: #000;
+    color: #101010;
 }
 
 .err__line .er {
@@ -248,7 +248,6 @@ body {
     border-left: 0.1vw solid #ffffff;
 }
 
-/* текст */
 
 /* ЛЕКЦИЯ*/
 .lec_title {
@@ -365,7 +364,7 @@ body {
 
 /* текстовые блоки */
 .text-box2 {
-    background: #000;
+    background: #101010;
     color: #fff;
     display: flex;
     align-items: center;
@@ -503,7 +502,7 @@ body {
     align-items: center;
     justify-content: center;
     background: #fff;
-    color: #000;
+    color: #101010;
     font-weight: 400;
     line-height: 100%;
     text-transform: lowercase;
@@ -596,3 +595,184 @@ body {
     height: 8vw;
     display: block;
 }
+
+/* БЛОК С ВЫХОДОМ */
+
+.ex {
+    background: #101010;
+
+    display: flex;
+    justify-content: center;
+}
+
+.ex_in {
+    width: 100%;
+}
+
+.ex_t {
+    margin: 0 0 1.6vw;
+    color: #fff;
+    font-family: "Fira Code", monospace;
+    font-size: 1.6vw;
+    font-weight: 400;
+    line-height: 1.09;
+}
+
+/* общий контейнер с рамкой */
+.ex_g {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+}
+
+/* клетка */
+.ex_c {
+    height: 9vw;
+    background: #101010;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+
+/* убрать правую линию у крайнего столбца (1-я и 2-я строки) */
+.ex_c3,
+.ex_c6,
+.ex_c9 {
+    border-right: none;
+}
+
+/* убрать нижнюю линию у последней строки */
+.ex_c7,
+.ex_c8,
+.ex_c9 {
+    border-bottom: none;
+}
+
+/* ШИРИНЫ (десктоп): 25 / 25 / 50 */
+.ex_c1 {
+    width: 25%;
+}
+
+.ex_c2 {
+    width: 25%;
+}
+
+.ex_c3 {
+    width: 50%;
+}
+
+.ex_c4 {
+    width: 25%;
+}
+
+.ex_c5 {
+    width: 25%;
+}
+
+.ex_c6 {
+    width: 50%;
+}
+
+.ex_c7 {
+    width: 50%;
+}
+
+.ex_c8 {
+    width: 25%;
+}
+
+.ex_c9 {
+    width: 25%;
+}
+
+/* фото-слоты: фон лежит отдельным div без обводки */
+.ex_bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(100%) blur(0.12vw);
+    z-index: 1;
+}
+
+/* текст на ховере */
+.ex_tx {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 2vw;
+    box-sizing: border-box;
+    color: #fff;
+    font-family: "Fira Code", monospace;
+    font-size: 2.1vw;
+    font-weight: 400;
+    line-height: 109%;
+
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* “ВЫХОД” */
+.ex_x {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ex_btn {
+    background: #fff;
+    color: #101010;
+    font-family: "Fira Code", monospace;
+    font-size: 1.64vw;
+    font-weight: 400;
+    line-height: 100%;
+    text-transform: uppercase;
+
+    padding: 1.2vw 4.2vw;
+    box-sizing: border-box;
+}
+
+/* показываем текст только при наведении на нужные блоки */
+.ex_e:hover .ex_tx {
+    opacity: 1;
+}
+
+/* пустые */
+.ex_p:hover .ex_tx {
+    opacity: 1;
+}
+
+/* фото-слоты (если нужно) */
+
+/* кнопка "выход": на ховере кнопка исчезает, появляется "не)" */
+.ex_x:hover .ex_btn {
+    opacity: 0;
+}
+
+.ex_x:hover .ex_tx {
+    opacity: 1;
+}
+
+.ex_a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ex_ar {
+    position: relative;
+    z-index: 2;
+    width: 30%;
+    height: auto;
+}
+
+.ex_c2 .ex_bg { background-image: url("../images/pic4.jpg"); }
+.ex_c4 .ex_bg { background-image: url("../images/pic2.jpg"); }
+.ex_c6 .ex_bg { background-image: url("../images/pic3.jpg"); }
