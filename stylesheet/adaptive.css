@@ -10,6 +10,18 @@
         font-size: 1.5vw;
 
     }
+
+    .info_lbl {
+        font-size: 2.2vw;
+    }
+
+    .info_name {
+        font-size: 3.2vw;
+    }
+
+    .info_img {
+        width: 34vw;
+    }
 }
 
 @media (max-width: 480px) {
@@ -185,7 +197,7 @@
     }
 
     .block2 {
-        width: 98%;
+        width: 100%;
         margin: 0 auto;
     }
 
@@ -552,7 +564,6 @@
             height: 20vw;
         }
 
-        /* 1 ряд */
         .ex_c1 {
             width: 50%;
         }
@@ -560,8 +571,6 @@
         .ex_c2 {
             width: 50%;
         }
-
-        /* 2 ряд */
         .ex_c4 {
             width: 50%;
         }
@@ -570,22 +579,18 @@
             width: 50%;
         }
 
-        /* 3 ряд */
         .ex_c7 {
             width: 100%;
         }
 
-        /* 4 ряд*/
         .ex_c3 {
             width: 100%;
         }
 
-        /* 5 ряд */
         .ex_c6 {
             width: 100%;
         }
 
-        /* 6 ряд*/
         .ex_c8 {
             width: 50%;
         }
@@ -628,6 +633,77 @@
             font-size: 3vw;
             padding: 3.5vw 12vw;
         }
-}
+        .ft {
+            padding: 6vw 0;
+        }
 
-   
+        .ft_in {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 6vw;
+        }
+
+        .ft_l,
+        .ft_r {
+            flex: none;
+            width: 100%;
+        }
+
+        .ft_m {
+            width: 100%;
+            justify-content: flex-start;
+        }
+
+        .ft_cap {
+            font-size: 4.2vw;
+            margin-bottom: 2vw;
+        }
+
+        .ft_txt {
+            font-size: 6.2vw;
+        }
+
+        .ft_logo {
+            width: 70vw;
+            max-width: none;
+        }
+                        .info {
+                            padding: 6vw 0;
+                        }
+        
+                        .info_in {
+                            flex-wrap: wrap;
+                            align-items: flex-start;
+                            gap: 5vw;
+                        }
+        
+                        .info_l {
+                            flex: 1 1 auto;
+                        }
+        
+                        .info_logo {
+                            flex: 0 0 auto;
+                            justify-content: flex-end;
+                        }
+        
+                        .info_r {
+                            flex: 1 1 100%;
+                            order: 3;
+                            align-items: flex-start;
+                            text-align: left;
+                            gap: 2vw;
+                        }
+        
+                        .info_lbl {
+                            font-size: 3vw;
+                        }
+        
+                        .info_name {
+                            font-size: 4vw;
+                        }
+        
+                        .info_img {
+                            width: 35vw;
+                            max-width: none;
+                        }
+}

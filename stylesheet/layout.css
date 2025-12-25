@@ -30,7 +30,7 @@ body {
 /* ПЕРВЫЙ ЭКРАН */
 
 .schedule {
-    padding: 2.8vw 0;
+    padding: 3vw 0;
     display: flex;
     justify-content: center;
 }
@@ -387,6 +387,8 @@ body {
     filter: grayscale(100%) blur(0.12vw);
     transition: filter 0.35s ease;
     box-sizing: border-box;
+    border: 0.05vw solid #fff;
+    
 }
 
 /* распределение высот*/
@@ -714,7 +716,6 @@ body {
     font-size: 2.1vw;
     font-weight: 400;
     line-height: 109%;
-
     opacity: 0;
     pointer-events: none;
 }
@@ -734,24 +735,18 @@ body {
     font-weight: 400;
     line-height: 100%;
     text-transform: uppercase;
-
     padding: 1.2vw 4.2vw;
     box-sizing: border-box;
 }
 
-/* показываем текст только при наведении на нужные блоки */
+/* ховеры */
 .ex_e:hover .ex_tx {
     opacity: 1;
 }
-
-/* пустые */
 .ex_p:hover .ex_tx {
     opacity: 1;
 }
 
-/* фото-слоты (если нужно) */
-
-/* кнопка "выход": на ховере кнопка исчезает, появляется "не)" */
 .ex_x:hover .ex_btn {
     opacity: 0;
 }
@@ -776,3 +771,62 @@ body {
 .ex_c2 .ex_bg { background-image: url("../images/pic4.jpg"); }
 .ex_c4 .ex_bg { background-image: url("../images/pic2.jpg"); }
 .ex_c6 .ex_bg { background-image: url("../images/pic3.jpg"); }
+
+
+
+/* ФУТЕР */
+.info {
+    background: #101010;
+    padding: 2.4vw 0;
+    display: flex;
+    justify-content: center;
+}
+
+.info_in {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2vw;
+}
+
+.info_l,
+.info_r {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6vw;
+}
+
+/* подписи */
+.info_lbl {
+    color: #fff;
+    opacity: 0.7;
+    font-family: Inter, sans-serif;
+    font-size: 1vw;
+    font-weight: 400;
+    line-height: 100%;
+}
+
+/* имена/группа */
+.info_name {
+    color: #fff;
+    font-family: Inter, sans-serif;
+    font-size: 2vw;
+    font-weight: 400;
+    line-height: 100%;
+}
+
+/* логотип */
+.info_logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+}
+
+.info_img {
+    width: 24vw;
+    max-width: 420px;
+    height: auto;
+    display: block;
+}
