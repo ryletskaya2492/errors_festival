@@ -3,7 +3,7 @@
 }
 @font-face {
     font-family: "HelveticaBold";
-    src: url("./fonts/HelveticaBold.woff") format("woff");
+    src: url("../fonts/HelveticaBold.woff") format("woff");
     font-weight: 700;
     font-style: normal;
 }
@@ -19,7 +19,6 @@ body {
     background-color: #101010;
     color: #ffffff;
     font-family: "Fira Code", monospace;
-
     font-synthesis: none;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -36,16 +35,16 @@ body {
     justify-content: center;
 }
 
-.schedule__inner {
+.schedule_in {
     position: relative;
     width: 94%;
     margin: 0 auto;
     background: #101010;
 }
 
-.schedule__top {
+.schedule_top {
     height: 23.6vw;
-    max-height: 350px;
+    max-height: 23.6vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -53,7 +52,8 @@ body {
     border-bottom: 1px solid #ffffff;
 }
 
-.schedule__title {
+/* раписание */
+.schedule_title {
     margin: 0;
     font-size: 14vw;
     font-weight: 400;
@@ -62,14 +62,15 @@ body {
     text-align: center;
 }
 
-.schedule__bottom {
+/* нижняя часть первого блока */
+.schedule_bottom {
     display: flex;
     height: 23.6vw;
-    max-height: 340px;
+    max-height: 23.6vw;
 }
 
-
-.schedule__festival {
+/* блок падающих букв */
+.schedule_festival {
     flex: 0 0 50%;
     padding: 2.8vw;
     display: flex;
@@ -88,6 +89,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 0.4vw;
+    
 }
 
 .festival-text .row {
@@ -138,12 +140,12 @@ body {
 
 .mrow {
     display: none;
-    /* спец-строка только для мобилки*/
+    /* спец-строка только для мобилки, вызываю ее в адаптиве*/
 }
 
 /* логотип */
 
-.schedule__logo {
+.schedule_logo {
     flex: 0 0 25%;
     background: #e5e5e5;
     position: relative;
@@ -185,14 +187,15 @@ body {
 .ps {
     transform: rotate(92deg) translateY(-20%);
 }
-/* бегущая строка */
 
+
+/* бегущая строка */
 .err {
     margin-top: 0;
 }
 
 .err__in {
-    height: 103px;
+    height: 7.15vw;
     background: #ffffff;
     display: flex;
     align-items: center;
@@ -202,7 +205,7 @@ body {
 .err__line {
     display: inline-flex;
     white-space: nowrap;
-    font-size: 50px;
+    font-size: 3.15vw;
     font-weight: 400;
     line-height: 1;
     text-transform: uppercase;
@@ -224,8 +227,7 @@ body {
     background: #101010;
 }
 
-
-/* 2 блок */
+/* 1 строка */
 .lec_row {
     display: flex;
     width: 100%;
@@ -312,4 +314,250 @@ body {
     max-width: 70%;
     max-height: 70%;
     object-fit: contain;
+}
+
+.block2 {
+    margin-top: -0.052vw;
+    padding: 0 3vw;
+    background: #101010;
+}
+
+.block2-inner {
+    display: flex;
+    width: 100%;
+    background: #101010;
+}
+
+/* левая и правая части */
+.block-left,
+.block-right {
+    display: flex;
+}
+
+.block-left {
+    flex: 0 0 52%;
+}
+
+.block-right {
+    flex: 0 0 48%;
+}
+
+/* колонки */
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+/* левая широкая колонка */
+.col-left {
+    flex: 0 0 67%;
+}
+
+/* узкая средняя колонка */
+.col-middle {
+    flex: 0 0 33%;
+}
+
+/* правая колонка занимает всю правую часть */
+.col-right {
+    flex: 1 1 auto;
+}
+
+/* текстовые блоки */
+.text-box2 {
+    background: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2vw;
+    font-size: 1.6vw;
+    letter-spacing: 8%;
+    text-transform: uppercase;
+    height: 7vw;
+    box-sizing: border-box;
+    border: 0.03vw solid #fff;
+}
+
+/* фото */
+.photo {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(100%) blur(0.12vw);
+    transition: filter 0.35s ease;
+    box-sizing: border-box;
+}
+
+/* распределение высот*/
+
+/* левая колонка: сверху текст, снизу фото */
+.col-left .lecture {
+    flex: 0 0 7vw;
+}
+
+.col-left .under-lecture {
+    flex: 1 1 auto;
+}
+
+/* средняя колонка: фото, текст, фото */
+.col-middle .top-two {
+    flex: 0 0 7vw;
+}
+
+.col-middle .two {
+    flex: 0 0 7vw;
+}
+
+.col-middle .under-two {
+    flex: 1 1 auto;
+}
+
+/* правая колонка */
+.col-right .top-error {
+    flex: 0 0 7vw;
+}
+
+.col-right .error {
+    flex: 0 0 7vw;
+}
+
+/* строка 403 */
+.row-403 {
+    display: flex;
+    flex: 0 0 7vw;
+}
+
+.row-403 .near-403 {
+    flex: 1 1 auto;
+}
+
+.row-403 .code403 {
+    flex: 0 0 33%;
+}
+
+
+/* БЛОК С ПУСТОТОЙ */
+.empty {
+    margin-top: -0.1vw;
+    justify-content: center;
+}
+
+.empty-box {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    aspect-ratio: 1357 / 636;
+    background: #101010;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* диагональ 1: из левого верхнего в правый нижний */
+.empty-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 141%;
+    height: 1px;
+    background: #fff;
+    transform-origin: 0 0;
+    transform: rotate(25.1deg);
+}
+
+/* диагональ 2: из левого нижнего в правый верхний */
+.empty-box::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 141%;
+    height: 1px;
+    background: #fff;
+    transform-origin: 0 100%;
+    transform: rotate(-25.1deg);
+}
+
+/* текст */
+.empty-text {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8vw;
+}
+
+.type .line {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+}
+
+.c {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    color: #000;
+    font-weight: 400;
+    line-height: 100%;
+    text-transform: lowercase;
+    padding: 0.10em 0.06em;
+}
+
+.small .c {
+    font-size: 2.2vw;
+}
+
+.big .c {
+    font-size: 2.2vw;
+}
+
+/* MEMORY OVERLAP*/
+
+.mo {
+    margin-top: -0.1vw;;
+}
+
+.mo-box {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    aspect-ratio: 1357 / 1350;
+    background: #101010;
+    overflow: hidden;
+}
+
+/* табличка (лекция) */
+.mo-lec {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 2.2vw 3.8vw;
+    border-right: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    font-family: "Fira Code", monospace;
+    font-size: 1.6vw;
+    font-weight: 400;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.mo-w {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: #fff;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 18.4vw;
+    line-height: 1;
+    white-space: nowrap;
+    transform-origin: left bottom;
+    z-index: 2;
 }

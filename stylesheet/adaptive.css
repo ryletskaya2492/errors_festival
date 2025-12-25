@@ -4,29 +4,29 @@
         padding: 4vw 0;
     }
 
-    .schedule__inner {
+    .schedule_in {
         width: 92%;
     }
-    .schedule__top {
+    .schedule_top {
         height: auto;
         max-height: none;
         padding: 5vw 4vw 3vw;
     }
 
-    .schedule__title {
+    .schedule_title {
         font-size: 12vw;
         line-height: 1;
         text-align: left;
         margin: 0;
     }
 
-    .schedule__bottom {
+    .schedule_bottom {
         flex-direction: column;
         height: auto;
         max-height: none;
     }
 
-    .schedule__festival {
+    .schedule_festival {
         flex: none;
         padding: 5vw 4vw 4vw;
         border-right: none;
@@ -62,7 +62,7 @@
         line-height: 1;
     }
 
-    .schedule__logo {
+    .schedule_logo {
         flex: none;
         width: 100%;
         min-height: 90vw;      
@@ -82,6 +82,14 @@
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+    .err__line {
+        font-size: 5vw;
+
+    }
+    .err__in {
+        height: 12vw;
+
     }
     
 
@@ -162,14 +170,390 @@
         bottom: 10vw;
     }
 
- }
-
-@media (max-width: 768px) {
-    .err__in {
-        height: 53px;
+    .block2 {
+        width: 98%;
+        margin: 0 auto;
     }
 
-    .err__line {
-        font-size: 25px;
+    .block2-inner {
+        flex-direction: column;
+        width: 100%;
+        box-sizing: border-box;
     }
+
+    .block-left,
+    .block-right {
+        flex: 0 0 100%;
+        width: 100%;
+    }
+
+    .text-box2 {
+        height: 12.5vw;
+        font-size: 3.8vw;
+        padding: 0 4vw;
+        border-width: 0.2vw;
+    }
+
+    .col-left .lecture,
+    .col-middle .top-two,
+    .col-middle .two,
+    .col-right .top-error,
+    .col-right .error,
+    .row-403 {
+        flex: 0 0 12.5vw;
+    }
+
+    .photo {
+        min-height: 20vw;
+        max-width: 100%;
+    }
+    .row-403 .near-403 {
+        flex: 1 1 auto;
+        height: 12.5vw;
+        min-height: 12.5vw;
+    }
+    .empty-box {
+        width: 100%;
+        aspect-ratio: 9 / 16;
+        margin: 0 auto;
+    }
+
+    .type .small .c,
+    .type .big .c {
+        font-size: 4.5vw;
+        padding: 0.28em 0.20em;
+    }
+    .mo {
+        margin-top: 0;
+    }
+    .mo-box {
+        width: 100%;
+        aspect-ratio: 9 / 16;
+    }
+
+    .mo-lec {
+        font-size: 4vw;
+        line-height: 1;
+        padding: 2.5vw 5vw;
+        min-height: 10vw;
+    }
+
+    .mo-w {
+        font-size: 20vw;
+    }
+
+    
+    @keyframes fall1 {
+        from {
+            top: -220%;
+            transform: translateX(4vw) rotate(0deg);
+        }
+
+        to {
+            top: 88%;
+            transform: translateX(4vw) rotate(0deg);
+        }
+    }
+
+    @keyframes fall2 {
+        from {
+            top: -220%;
+            transform: translateX(18vw) rotate(7deg);
+        }
+
+        to {
+            top: 80%;
+            transform: translateX(18vw) rotate(7deg);
+        }
+    }
+
+    @keyframes fall3 {
+        from {
+            top: -220%;
+            transform: translateX(2vw) rotate(-11deg);
+        }
+
+        to {
+            top: 82%;
+            transform: translateX(2vw) rotate(-11deg);
+        }
+    }
+
+    @keyframes fall4 {
+        from {
+            top: -220%;
+            transform: translateX(26vw) rotate(19deg);
+        }
+
+        to {
+            top: 78%;
+            transform: translateX(26vw) rotate(19deg);
+        }
+    }
+
+    @keyframes fall5 {
+        from {
+            top: -220%;
+            transform: translateX(8vw) rotate(-4deg);
+        }
+
+        to {
+            top: 70%;
+            transform: translateX(8vw) rotate(-4deg);
+        }
+    }
+
+    @keyframes fall6 {
+        from {
+            top: -220%;
+            transform: translateX(31vw) rotate(13deg);
+        }
+
+        to {
+            top: 66%;
+            transform: translateX(31vw) rotate(13deg);
+        }
+    }
+
+    @keyframes fall7 {
+        from {
+            top: -220%;
+            transform: translateX(1vw) rotate(-27deg);
+        }
+
+        to {
+            top: 62%;
+            transform: translateX(1vw) rotate(-27deg);
+        }
+    }
+
+    @keyframes fall8 {
+        from {
+            top: -220%;
+            transform: translateX(22vw) rotate(3deg);
+        }
+
+        to {
+            top: 58%;
+            transform: translateX(22vw) rotate(3deg);
+        }
+    }
+
+    @keyframes fall9 {
+        from {
+            top: -220%;
+            transform: translateX(6vw) rotate(24deg);
+        }
+
+        to {
+            top: 52%;
+            transform: translateX(6vw) rotate(24deg);
+        }
+    }
+
+    @keyframes fall10 {
+        from {
+            top: -220%;
+            transform: translateX(24vw) rotate(-9deg);
+        }
+
+        to {
+            top: 48%;
+            transform: translateX(24vw) rotate(-9deg);
+        }
+    }
+
+    @keyframes fall11 {
+        from {
+            top: -220%;
+            transform: translateX(3vw) rotate(5deg);
+        }
+
+        to {
+            top: 44%;
+            transform: translateX(3vw) rotate(5deg);
+        }
+    }
+
+    @keyframes fall12 {
+        from {
+            top: -220%;
+            transform: translateX(20vw) rotate(-10deg);
+        }
+
+        to {
+            top: 40%;
+            transform: translateX(20vw) rotate(-10deg);
+        }
+    }
+
+    @keyframes fall13 {
+        from {
+            top: -220%;
+            transform: translateX(11vw) rotate(80deg);
+        }
+
+        to {
+            top: 38%;
+            transform: translateX(11vw) rotate(80deg);
+        }
+    }
+
+    @keyframes fall14 {
+        from {
+            top: -220%;
+            transform: translateX(29vw) rotate(28deg);
+        }
+
+        to {
+            top: 36%;
+            transform: translateX(29vw) rotate(28deg);
+        }
+    }
+
+    @keyframes fall15 {
+        from {
+            top: -220%;
+            transform: translateX(5vw) rotate(-10deg);
+        }
+
+        to {
+            top: 34%;
+            transform: translateX(5vw) rotate(-10deg);
+        }
+    }
+
+    @keyframes fall16 {
+        from {
+            top: -220%;
+            transform: translateX(26vw) rotate(-30deg);
+        }
+
+        to {
+            top: 32%;
+            transform: translateX(26vw) rotate(-30deg);
+        }
+    }
+
+    @keyframes fall17 {
+        from {
+            top: -220%;
+            transform: translateX(12vw) rotate(2deg);
+        }
+
+        to {
+            top: 30%;
+            transform: translateX(12vw) rotate(2deg);
+        }
+    }
+
+    @keyframes fall18 {
+        from {
+            top: -220%;
+            transform: translateX(33vw) rotate(-22deg);
+        }
+
+        to {
+            top: 28%;
+            transform: translateX(33vw) rotate(-22deg);
+        }
+    }
+
+    @keyframes fall19 {
+        from {
+            top: -220%;
+            transform: translateX(6vw) rotate(50deg);
+        }
+
+        to {
+            top: 22%;
+            transform: translateX(6vw) rotate(50deg);
+        }
+    }
+
+    @keyframes fall20 {
+        from {
+            top: -220%;
+            transform: translateX(28vw) rotate(-5deg);
+        }
+
+        to {
+            top: 20%;
+            transform: translateX(28vw) rotate(-5deg);
+        }
+    }
+
+    @keyframes fall21 {
+        from {
+            top: -220%;
+            transform: translateX(15vw) rotate(26deg);
+        }
+
+        to {
+            top: 18%;
+            transform: translateX(15vw) rotate(26deg);
+        }
+    }
+
+    @keyframes fall22 {
+        from {
+            top: -220%;
+            transform: translateX(2vw) rotate(-14deg);
+        }
+
+        to {
+            top: 15%;
+            transform: translateX(2vw) rotate(-14deg);
+        }
+    }
+        
+    .empty-box::before {
+        width: 220%;
+        transform: rotate(60.6deg);
+    }
+
+    .empty-box::after {
+        width: 220%;
+        transform: rotate(-60.6deg);
+    }
+            
 }
+
+/* @media (max-width: 768px) { */
+
+    /* .empty {
+        margin-top: 0vw;
+    }
+
+    .empty-box {
+        width: 100%;
+        aspect-ratio: 9 / 16;
+    }
+
+    .empty-box::before,
+    .empty-box::after {
+        width: 180%;
+        height: 1px;
+    }
+
+    /* текст */
+    /* .empty-text {
+        gap: 2vw;
+    } */ 
+
+    /* .type .small .c,
+    .type .big .c {
+        font-size: 4vw;
+        padding: 0.25em 0.18em;
+    }
+    .empty-box::before {
+        width: 220%;
+        transform: rotate(60.6deg);
+    }
+
+    .empty-box::after {
+        width: 220%;
+        transform: rotate(-60.6deg);
+    } */
+   
+/* } */

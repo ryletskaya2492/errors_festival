@@ -1,6 +1,6 @@
 /* РАСПИСАНИЕ */
 
-.schedule__title {
+.schedule_title {
     position: relative;
     animation: title_moving 2.8s ease-in-out infinite;
 }
@@ -455,3 +455,605 @@
         transform: scale(1);
     }
 }
+
+ /* ПАДЕНИЕ БЛОКОВ */
+
+ .fall2 {
+     transform-origin: 0 0;
+     transition:
+         transform 0.55s cubic-bezier(0.2, 0.8, 0.2, 1),
+         box-shadow 0.55s ease;
+ }
+
+ .fall2:hover {
+     transform: rotate(14deg) translate(1vw, 3.2vw);
+ }
+
+
+ @keyframes pics {
+     0% {
+         background-image: url("../images/pic1.jpg");
+     }
+
+     20% {
+         background-image: url("../images/pic2.jpg");
+     }
+
+     40% {
+         background-image: url("../images/pic3.jpg");
+     }
+
+     60% {
+         background-image: url("../images/pic4.jpg");
+     }
+
+     80% {
+         background-image: url("../images/pic5.jpg");
+     }
+
+     100% {
+         background-image: url("../images/pic1.jpg");
+     }
+ }
+
+ .photo {
+     animation: pics 4.5s steps(1, end) infinite;
+ }
+
+ .under-lecture {
+     animation-delay: 0s;
+ }
+
+ .top-two {
+     animation-delay: -0.7s;
+ }
+
+ .under-two {
+     animation-delay: -1.4s;
+ }
+
+ .top-error {
+     animation-delay: -2.1s;
+ }
+
+ .near-403 {
+     animation-delay: -2.8s;
+ }
+
+/* БЛОК (ПУСТОТЫ) */
+
+ .type .c {
+     opacity: 0;
+     animation: typeCycle 10s infinite;
+ }
+
+ /* кадры для букв */
+ @keyframes typeCycle {
+     0% {
+         opacity: 0;
+     }
+
+     8% {
+         opacity: 1;
+     }
+
+     70% {
+         opacity: 1;
+     }
+
+     80% {
+         opacity: 0;
+     }
+
+     100% {
+         opacity: 0;
+     }
+ }
+
+
+ /* oops.. */
+ .line.small .c:nth-child(1) {
+     animation-delay: 0.15s;
+ }
+
+ .line.small .c:nth-child(2) {
+     animation-delay: 0.62s;
+ }
+
+ .line.small .c:nth-child(3) {
+     animation-delay: 0.91s;
+ }
+
+ .line.small .c:nth-child(4) {
+     animation-delay: 1.78s;
+ }
+
+ .line.small .c:nth-child(5) {
+     animation-delay: 2.05s;
+ }
+
+ .line.small .c:nth-child(6) {
+     animation-delay: 2.90s;
+ }
+
+ .line.small .c:nth-child(7) {
+     animation-delay: 3.25s;
+ }
+
+ /* просто ничего нет */
+ .line.big .c:nth-child(1) {
+     animation-delay: 4.20s;
+ }
+
+ .line.big .c:nth-child(2) {
+     animation-delay: 4.55s;
+ }
+
+ .line.big .c:nth-child(3) {
+     animation-delay: 5.40s;
+ }
+
+ .line.big .c:nth-child(4) {
+     animation-delay: 5.95s;
+ }
+
+ .line.big .c:nth-child(5) {
+     animation-delay: 6.10s;
+ }
+
+ .line.big .c:nth-child(6) {
+     animation-delay: 6.90s;
+ }
+
+ .line.big .c:nth-child(7) {
+     animation-delay: 7.15s;
+ }
+
+ .line.big .c:nth-child(8) {
+     animation-delay: 7.95s;
+ }
+
+ .line.big .c:nth-child(9) {
+     animation-delay: 8.20s;
+ }
+
+ .line.big .c:nth-child(10) {
+     animation-delay: 8.95s;
+ }
+
+ .line.big .c:nth-child(11) {
+     animation-delay: 9.10s;
+ }
+
+ .line.big .c:nth-child(12) {
+     animation-delay: 9.80s;
+ }
+
+ .line.big .c:nth-child(13) {
+     animation-delay: 10.15s;
+ }
+
+ .line.big .c:nth-child(14) {
+     animation-delay: 10.70s;
+ }
+
+ .line.big .c:nth-child(15) {
+     animation-delay: 11.05s;
+ }
+
+ .line.big .c:nth-child(16) {
+     animation-delay: 11.60s;
+ }
+
+ .line.big .c:nth-child(17) {
+     animation-delay: 12.20s;
+ }
+
+
+ /* MEMORY OVERLAP */
+
+ .mo-w {
+     top: -220%;
+     /* до старта сильно выше блока, чтобы не видно было */
+     animation-duration: 6.2s;
+     animation-timing-function: ease-in-out;
+     animation-fill-mode: both;
+ }
+
+ /* d1 */
+ .d1 {
+     animation-name: fall1;
+     animation-delay: 0s;
+ }
+
+ @keyframes fall1 {
+     from {
+         top: -220%;
+         transform: translateX(4vw) rotate(0deg);
+     }
+
+     to {
+         top: 80%;
+         transform: translateX(4vw) rotate(0deg);
+     }
+ }
+
+ /* d2 */
+ .d2 {
+     animation-name: fall2;
+     animation-delay: 4.2s;
+ }
+
+ @keyframes fall2 {
+     from {
+         top: -220%;
+         transform: translateX(18vw) rotate(7deg);
+     }
+
+     to {
+         top: 80%;
+         transform: translateX(18vw) rotate(7deg);
+     }
+ }
+
+ /* d3 */
+ .d3 {
+     animation-name: fall3;
+     animation-delay: 8.4s;
+ }
+
+ @keyframes fall3 {
+     from {
+         top: -220%;
+         transform: translateX(2vw) rotate(-11deg);
+     }
+
+     to {
+         top: 78%;
+         transform: translateX(2vw) rotate(-11deg);
+     }
+ }
+
+ /* d4 */
+ .d4 {
+     animation-name: fall4;
+     animation-delay: 12.6s;
+ }
+
+ @keyframes fall4 {
+     from {
+         top: -220%;
+         transform: translateX(26vw) rotate(19deg);
+     }
+
+     to {
+         top: 72%;
+         transform: translateX(26vw) rotate(19deg);
+     }
+ }
+
+ /* d5 */
+ .d5 {
+     animation-name: fall5;
+     animation-delay: 16.8s;
+ }
+
+ @keyframes fall5 {
+     from {
+         top: -220%;
+         transform: translateX(8vw) rotate(-4deg);
+     }
+
+     to {
+         top: 66%;
+         transform: translateX(8vw) rotate(-4deg);
+     }
+ }
+
+ /* d6 */
+ .d6 {
+     animation-name: fall6;
+     animation-delay: 21.0s;
+ }
+
+ @keyframes fall6 {
+     from {
+         top: -220%;
+         transform: translateX(31vw) rotate(13deg);
+     }
+
+     to {
+         top: 60%;
+         transform: translateX(31vw) rotate(13deg);
+     }
+ }
+
+ /* d7 */
+ .d7 {
+     animation-name: fall7;
+     animation-delay: 25.2s;
+ }
+
+ @keyframes fall7 {
+     from {
+         top: -220%;
+         transform: translateX(1vw) rotate(-27deg);
+     }
+
+     to {
+         top: 54%;
+         transform: translateX(1vw) rotate(-27deg);
+     }
+ }
+
+ /* d8 */
+ .d8 {
+     animation-name: fall8;
+     animation-delay: 29.4s;
+ }
+
+ @keyframes fall8 {
+     from {
+         top: -220%;
+         transform: translateX(22vw) rotate(3deg);
+     }
+
+     to {
+         top: 48%;
+         transform: translateX(22vw) rotate(3deg);
+     }
+ }
+
+ /* d9 */
+ .d9 {
+     animation-name: fall9;
+     animation-delay: 33.6s;
+ }
+
+ @keyframes fall9 {
+     from {
+         top: -220%;
+         transform: translateX(6vw) rotate(24deg);
+     }
+
+     to {
+         top: 44%;
+         transform: translateX(6vw) rotate(24deg);
+     }
+ }
+
+ /* d10 */
+ .d10 {
+     animation-name: fall10;
+     animation-delay: 37.8s;
+ }
+
+ @keyframes fall10 {
+     from {
+         top: -220%;
+         transform: translateX(24vw) rotate(-9deg);
+     }
+
+     to {
+         top: 40%;
+         transform: translateX(24vw) rotate(-9deg);
+     }
+ }
+
+ /* d11 */
+ .d11 {
+     animation-name: fall11;
+     animation-delay: 42.0s;
+ }
+
+ @keyframes fall11 {
+     from {
+         top: -220%;
+         transform: translateX(3vw) rotate(5deg);
+     }
+
+     to {
+         top: 36%;
+         transform: translateX(3vw) rotate(5deg);
+     }
+ }
+
+ /* d12 */
+ .d12 {
+     animation-name: fall12;
+     animation-delay: 46.2s;
+ }
+
+ @keyframes fall12 {
+     from {
+         top: -220%;
+         transform: translateX(20vw) rotate(-10deg);
+     }
+
+     to {
+         top: 32%;
+         transform: translateX(20vw) rotate(-10deg);
+     }
+ }
+
+ /* d13 */
+ .d13 {
+     animation-name: fall13;
+     animation-delay: 50.4s;
+ }
+
+ @keyframes fall13 {
+     from {
+         top: -220%;
+         transform: translateX(11vw) rotate(80deg);
+     }
+
+     to {
+         top: 30%;
+         transform: translateX(11vw) rotate(80deg);
+     }
+ }
+
+ /* d14 */
+ .d14 {
+     animation-name: fall14;
+     animation-delay: 54.6s;
+ }
+
+ @keyframes fall14 {
+     from {
+         top: -220%;
+         transform: translateX(29vw) rotate(28deg);
+     }
+
+     to {
+         top: 28%;
+         transform: translateX(29vw) rotate(28deg);
+     }
+ }
+
+ /* d15 */
+ .d15 {
+     animation-name: fall15;
+     animation-delay: 58.8s;
+ }
+
+ @keyframes fall15 {
+     from {
+         top: -220%;
+         transform: translateX(5vw) rotate(-10deg);
+     }
+
+     to {
+         top: 26%;
+         transform: translateX(5vw) rotate(-10deg);
+     }
+ }
+
+ /* d16 */
+ .d16 {
+     animation-name: fall16;
+     animation-delay: 63.0s;
+ }
+
+ @keyframes fall16 {
+     from {
+         top: -220%;
+         transform: translateX(26vw) rotate(-30deg);
+     }
+
+     to {
+         top: 24%;
+         transform: translateX(26vw) rotate(-30deg);
+     }
+ }
+
+ /* d17 */
+ .d17 {
+     animation-name: fall17;
+     animation-delay: 67.2s;
+ }
+
+ @keyframes fall17 {
+     from {
+         top: -220%;
+         transform: translateX(12vw) rotate(2deg);
+     }
+
+     to {
+         top: 22%;
+         transform: translateX(12vw) rotate(2deg);
+     }
+ }
+
+ /* d18 */
+ .d18 {
+     animation-name: fall18;
+     animation-delay: 71.4s;
+ }
+
+ @keyframes fall18 {
+     from {
+         top: -220%;
+         transform: translateX(33vw) rotate(-22deg);
+     }
+
+     to {
+         top: 20%;
+         transform: translateX(33vw) rotate(-22deg);
+     }
+ }
+
+ /* d19 */
+ .d19 {
+     animation-name: fall19;
+     animation-delay: 75.6s;
+ }
+
+ @keyframes fall19 {
+     from {
+         top: -220%;
+         transform: translateX(6vw) rotate(50deg);
+     }
+
+     to {
+         top: 18%;
+         transform: translateX(6vw) rotate(50deg);
+     }
+ }
+
+ /* d20 */
+ .d20 {
+     animation-name: fall20;
+     animation-delay: 79.8s;
+ }
+
+ @keyframes fall20 {
+     from {
+         top: -220%;
+         transform: translateX(28vw) rotate(-5deg);
+     }
+
+     to {
+         top: 16%;
+         transform: translateX(28vw) rotate(-5deg);
+     }
+ }
+
+ /* d21 */
+ .d21 {
+     animation-name: fall21;
+     animation-delay: 84.0s;
+ }
+
+ @keyframes fall21 {
+     from {
+         top: -220%;
+         transform: translateX(15vw) rotate(26deg);
+     }
+
+     to {
+         top: 14%;
+         transform: translateX(15vw) rotate(26deg);
+     }
+ }
+
+ /* d22 */
+ .d22 {
+     animation-name: fall22;
+     animation-delay: 88.2s;
+ }
+
+ @keyframes fall22 {
+     from {
+         top: -220%;
+         transform: translateX(2vw) rotate(-14deg);
+     }
+
+     to {
+         top: 12%;
+         transform: translateX(2vw) rotate(-14deg);
+     }
+ }
+
+
