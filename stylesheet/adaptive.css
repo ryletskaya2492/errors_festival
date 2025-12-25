@@ -516,6 +516,20 @@
         width: 220%;
         transform: rotate(-60.6deg);
     }
+        .reg_i {
+            width: 94%;
+            min-height: 70vw;
+            gap: 6vw;
+        }
+    
+        .reg_t {
+            font-size: 8vw;
+        }
+    
+        .reg_l {
+            width: 18vw;
+            height: 18vw;
+        }
             
 }
 

@@ -561,3 +561,38 @@ body {
     transform-origin: left bottom;
     z-index: 2;
 }
+
+/* БЛОК С РЕГИСТРАЦИЕЙ */
+.reg {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: #101010;
+}
+
+.reg_i {
+    width: 100%;
+    min-height: 35vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw;
+}
+
+.reg_t {
+    color: #fff;
+    font-family: Inter, sans-serif;
+    font-size: 6.6vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.reg_l {
+    width: 8vw;
+    height: 8vw;
+    display: block;
+}
