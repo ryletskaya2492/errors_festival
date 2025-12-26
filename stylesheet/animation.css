@@ -1126,7 +1126,6 @@
 }
 
 /* доп блок анимация наборника */
-
 .lec_txt .lec_body {
     animation: txt_dissolve 4s ease-in-out infinite;
 }
