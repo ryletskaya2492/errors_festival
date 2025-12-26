@@ -1129,7 +1129,6 @@
 
 .lec_txt .lec_body {
     animation: txt_dissolve 4s ease-in-out infinite;
-    will-change: transform, opacity, filter;
 }
 
 .lec_txt .lec_body:nth-child(2) {
