@@ -1,5 +1,4 @@
 /* РАСПИСАНИЕ */
-
 .schedule_title {
     position: relative;
     animation: title_moving 2.8s ease-in-out infinite;
@@ -48,7 +47,7 @@
     animation: fallRow3 0.9s ease-out forwards;
 }
 
-/* траектории для трёх строк */
+/* траектории для трех строк */
 
 @keyframes fallRow1 {
     0% {
@@ -104,7 +103,10 @@
     }
 }
 
-
+/* здесь и далее я использую nth-child, чтобы не создавать кучу лишних классов */
+/* так, я просто говорю программе идти и перебирать элементы в последовательности */
+/* конкретно здесь даже "иди по последовательностям и внутри конкретной дальше перебирай ее элементы" */
+/* 3 years of python and R core)) */
 .festival-text.fall:hover .row:nth-child(1) .ch:nth-child(1) {
     animation-delay: 0.27s;
 }
@@ -243,25 +245,24 @@
 }
 
 .binary .b::after {
-    animation-name: bitFlip;
-    animation-duration: 2.5s;
-    animation-iteration-count: infinite;
+    animation: bitFlip 2.5s infinite;
 }
 
+/* здесь использую n, чтобы не писать большое количество однообразных строк,
+просто задаю правило "возьми каждый второй, каждый третий, каждый пятый",
+не прописывая для каждого элемента в строке  */
+.binary__row .b:nth-child(2n)::after {
+    animation-delay: 0s;
+}
 .binary__row .b:nth-child(3n)::after {
-    animation-delay: 0.0s;
-}
-
-.binary__row .b:nth-child(3n+1)::after {
     animation-delay: 0.4s;
 }
-
-.binary__row .b:nth-child(3n+2)::after {
+.binary__row .b:nth-child(5n)::after {
     animation-delay: 0.8s;
 }
 
-/* логотип поворот */
 
+/* логотип поворот */
 @keyframes logo-spin {
     from {
         transform: translate(-50%, -50%) rotate(12deg);
@@ -277,13 +278,12 @@
 }
 
 /* бегущая строка*/
-
-.err__line {
+.err_line {
     animation: err-move 25s linear infinite;
 }
 
 /* исчезновение части текста*/
-.err__line .er1:hover {
+.err_line .er:hover {
     opacity: 0;
     transition: opacity 0.25s ease-out;
 }
@@ -297,13 +297,12 @@
         transform: translateX(-50%);
     }
 }
-
-/* глитч типо */
+/* для глича я использую добавление тени текста, но делаю ее цветной,
+чтобы было ощущения глича, а потом двигаю ее вправо влево с разными задержками */
 .lec_glitch .lec_title {
     animation: lec-glitch-title 0.8s steps(2, end) infinite;
 }
 
-/* тоже глитч на единицу */
 .lec_glitch .lec_one {
     animation: lec-glitch-one 0.8s steps(2, end) infinite;
 }
@@ -365,7 +364,6 @@
     }
 }
 
-
 /* для единицы */
 @keyframes lec-glitch-one {
     0% {
@@ -423,6 +421,9 @@
         text-shadow: 0 0 0 #fff;
     }
 }
+
+/* анимация персонажа */
+/* просто через трасформ  */
 .lec_char_img {
     animation: charPulse 3.6s ease-in-out infinite;
     transform-origin: center bottom;
@@ -459,10 +460,9 @@
  /* ПАДЕНИЕ БЛОКОВ */
 
  .fall2 {
+    /* закрепление левого верхнего угла как точки опоры) */
      transform-origin: 0 0;
-     transition:
-         transform 0.55s cubic-bezier(0.2, 0.8, 0.2, 1),
-         box-shadow 0.55s ease;
+     transition: transform 0.3s ease-out;
  }
 
  .fall2:hover {
@@ -496,8 +496,10 @@
      }
  }
 
+ /* разные задержки, чтобы было ощущение рандомной смены фоток внутри блоков*/
  .photo {
      animation: pics 4.5s steps(1, end) infinite;
+    transition: filter 0.35s ease;
  }
 
  .under-lecture {
@@ -520,15 +522,16 @@
      animation-delay: -2.8s;
  }
 
-/* БЛОК (ПУСТОТЫ) */
 
+
+/* БЛОК (ПУСТОТА) */
  .type .c {
      opacity: 0;
-     animation: typeCycle 10s infinite;
+     animation: empty 10s infinite;
  }
 
- /* кадры для букв */
- @keyframes typeCycle {
+ /* кадры для букв (у них еще фон белый задан) */
+ @keyframes empty {
      0% {
          opacity: 0;
      }
@@ -550,7 +553,7 @@
      }
  }
 
-
+/* программа идет по каждой букве и начинает ее показ после заданной задержки */
  /* oops.. */
  .line.small .c:nth-child(1) {
      animation-delay: 0.15s;
@@ -660,6 +663,8 @@
      animation-fill-mode: both;
  }
 
+/* ну и 22 итерации анимаций, где слову задана задержка, угол поворота и положени от низа блока */
+/* так они визуально накладываются друг на друга */
  /* d1 */
  .d1 {
      animation-name: fall1;
@@ -1069,13 +1074,17 @@
      }
     }
 
+
+
+
+/* БЛОК С ВЫХОДОМ */
 .ex_c2 .ex_bg,
 .ex_c4 .ex_bg,
 .ex_c6 .ex_bg {
     animation: ex_ph 6s steps(1, end) infinite;
 }
 
-/* чтобы у трёх слотов были разные стартовые кадры */
+/* чтобы у трех слотов были разные стартовые кадры */
 .ex_c4 .ex_bg {
     animation-delay: -2s;
 }
@@ -1110,6 +1119,7 @@
     }
 }
 
+/* кручение стрелки */
 .ex_ar {
     transform-origin: 50% 50%;
     animation: ex_spin 1.6s linear infinite;
@@ -1125,11 +1135,12 @@
     }
 }
 
-/* доп блок анимация наборника */
+/* доп блок анимация наборника, который в начале про 404*/
 .lec_txt .lec_body {
     animation: txt_dissolve 4s ease-in-out infinite;
 }
 
+/* второй абзац */
 .lec_txt .lec_body:nth-child(2) {
     animation-delay: 1.2s;
 }

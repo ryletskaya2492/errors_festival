@@ -10,6 +10,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 
@@ -54,7 +55,6 @@ body {
 
 /* раписание */
 .schedule_title {
-    margin: 0;
     font-size: 14vw;
     font-weight: 400;
     line-height: 1;
@@ -101,7 +101,6 @@ body {
 }
 
 /* бинарный код */
-
 .schedule__binary {
     flex: 0 0 25%;
     background: #101010;
@@ -194,7 +193,7 @@ body {
     margin-top: 0;
 }
 
-.err__in {
+.err_in {
     height: 7.15vw;
     background: #ffffff;
     display: flex;
@@ -202,7 +201,7 @@ body {
     overflow: hidden;
 }
 
-.err__line {
+.err_line {
     display: inline-flex;
     white-space: nowrap;
     font-size: 3.15vw;
@@ -212,10 +211,8 @@ body {
     color: #101010;
 }
 
-.err__line .er {
-    display: inline-block;
-}
 
+/* БЛОК 2 */
 .lec {
     margin-top: 2.8vw;
     background: #101010;
@@ -238,7 +235,7 @@ body {
 /* ячейки */
 .lec_cell {
     flex: 1 1 0;
-    padding: 2.2vw 2.2vw 2.6vw;
+    padding: 2.2vw 2.2vw 2.2vw;
     aspect-ratio: 1 / 1;
     background: #101010;
 }
@@ -315,13 +312,15 @@ body {
     object-fit: contain;
 }
 
+
+/* БЛОК С ФОТО */
 .block2 {
     margin-top: -0.052vw;
     padding: 0 3vw;
     background: #101010;
 }
 
-.block2-inner {
+.block2_in {
     display: flex;
     width: 100%;
     background: #101010;
@@ -347,19 +346,19 @@ body {
     flex-direction: column;
 }
 
-/* левая широкая колонка */
+/* левая колонка */
 .col-left {
     flex: 0 0 67%;
 }
 
-/* узкая средняя колонка */
+/* средняя колонка */
 .col-middle {
     flex: 0 0 33%;
 }
 
-/* правая колонка занимает всю правую часть */
+/* правая колонка */
 .col-right {
-    flex: 1 1 auto;
+    flex: 0 0 100%;
 }
 
 /* текстовые блоки */
@@ -385,42 +384,27 @@ body {
     background-size: cover;
     background-position: center;
     filter: grayscale(100%) blur(0.12vw);
-    transition: filter 0.35s ease;
     box-sizing: border-box;
     border: 0.05vw solid #fff;
     
 }
 
 /* распределение высот*/
-
 /* левая колонка: сверху текст, снизу фото */
 .col-left .lecture {
     flex: 0 0 7vw;
 }
-
 .col-left .under-lecture {
     flex: 1 1 auto;
 }
 
 /* средняя колонка: фото, текст, фото */
-.col-middle .top-two {
+.col-middle .top-two, .two, .under-two {
     flex: 0 0 7vw;
-}
-
-.col-middle .two {
-    flex: 0 0 7vw;
-}
-
-.col-middle .under-two {
-    flex: 1 1 auto;
 }
 
 /* правая колонка */
-.col-right .top-error {
-    flex: 0 0 7vw;
-}
-
-.col-right .error {
+.col-right .top-error, .error {
     flex: 0 0 7vw;
 }
 
@@ -431,7 +415,7 @@ body {
 }
 
 .row-403 .near-403 {
-    flex: 1 1 auto;
+    flex: 0 0 67%;
 }
 
 .row-403 .code403 {
@@ -509,18 +493,12 @@ body {
     line-height: 100%;
     text-transform: lowercase;
     padding: 0.10em 0.06em;
-}
-
-.small .c {
     font-size: 2.2vw;
 }
 
-.big .c {
-    font-size: 2.2vw;
-}
+
 
 /* MEMORY OVERLAP*/
-
 .mo {
     margin-top: -0.1vw;;
 }
@@ -542,7 +520,6 @@ body {
     padding: 2.2vw 3.8vw;
     border-right: 1px solid #fff;
     border-bottom: 1px solid #fff;
-    font-family: "Fira Code", monospace;
     font-size: 1.6vw;
     font-weight: 400;
     color: #fff;
@@ -560,7 +537,6 @@ body {
     line-height: 1;
     white-space: nowrap;
     transform-origin: left bottom;
-    z-index: 2;
 }
 
 /* БЛОК С РЕГИСТРАЦИЕЙ */
@@ -599,10 +575,8 @@ body {
 }
 
 /* БЛОК С ВЫХОДОМ */
-
 .ex {
     background: #101010;
-
     display: flex;
     justify-content: center;
 }
@@ -620,7 +594,7 @@ body {
     line-height: 1.09;
 }
 
-/* общий контейнер с рамкой */
+/* общий контейнер */
 .ex_g {
     display: flex;
     flex-wrap: wrap;
@@ -640,21 +614,19 @@ body {
     border-bottom: 1px solid #fff;
 }
 
-/* убрать правую линию у крайнего столбца (1-я и 2-я строки) */
+/* убираю линии, чтобы не дублировалось */
 .ex_c3,
 .ex_c6,
 .ex_c9 {
     border-right: none;
 }
 
-/* убрать нижнюю линию у последней строки */
 .ex_c7,
 .ex_c8,
 .ex_c9 {
     border-bottom: none;
 }
 
-/* ШИРИНЫ (десктоп): 25 / 25 / 50 */
 .ex_c1 {
     width: 25%;
 }
@@ -691,7 +663,7 @@ body {
     width: 25%;
 }
 
-/* фото-слоты: фон лежит отдельным div без обводки */
+/* фото-слоты */
 .ex_bg {
     position: absolute;
     inset: 0;
@@ -743,9 +715,6 @@ body {
 .ex_e:hover .ex_tx {
     opacity: 1;
 }
-.ex_p:hover .ex_tx {
-    opacity: 1;
-}
 
 .ex_x:hover .ex_btn {
     opacity: 0;
@@ -772,8 +741,8 @@ body {
 .ex_c4 .ex_bg { background-image: url("../images/pic2.jpg"); }
 .ex_c6 .ex_bg { background-image: url("../images/pic3.jpg"); }
 
-/* ФУТЕР */
 
+/* ФУТЕР */
 .info {
     background: #101010;
     padding: 2.4vw 0;
@@ -789,7 +758,7 @@ body {
     gap: 2vw;
 }
 
-/* левая/правая колонки */
+/* колонки */
 .info_l,
 .info_r {
     display: flex;
