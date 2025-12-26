@@ -268,32 +268,6 @@ body {
     text-transform: uppercase;
 }
 
-.lec_err {
-    position: relative;
-    overflow: hidden;
-}
-
-.lec_err::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: url("../images/plash.svg") center / 78% no-repeat;
-    opacity: 0;
-    transition: opacity 0.35s ease;
-    z-index: 2;
-    pointer-events: none;
-}
-
-/* ховер */
-.lec_err:hover::after {
-    opacity: 1;
-}
-
-.lec_err_title {
-    position: relative;
-    z-index: 1;
-}
-
 .lec_body {
     margin: 0 0 1vw;
     color: #fff;
@@ -798,9 +772,8 @@ body {
 .ex_c4 .ex_bg { background-image: url("../images/pic2.jpg"); }
 .ex_c6 .ex_bg { background-image: url("../images/pic3.jpg"); }
 
-
-
 /* ФУТЕР */
+
 .info {
     background: #101010;
     padding: 2.4vw 0;
@@ -816,12 +789,14 @@ body {
     gap: 2vw;
 }
 
+/* левая/правая колонки */
 .info_l,
 .info_r {
     display: flex;
     flex-direction: column;
     gap: 0.6vw;
 }
+
 
 /* подписи */
 .info_lbl {
@@ -851,7 +826,7 @@ body {
 }
 
 .info_img {
-    width: 24vw;
+    width: 20vw;
     max-width: 420px;
     height: auto;
     display: block;

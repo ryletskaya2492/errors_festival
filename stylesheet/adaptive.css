@@ -5,7 +5,6 @@
     .mo-lec {
         font-size: 2.5vw;
     }
-
     .lec_body {
         font-size: 1.5vw;
 
@@ -144,8 +143,8 @@
     }
     .lec {
         margin-top: 8vw;
-        padding-left: 4vw;
-        padding-right: 4vw;
+        padding-left: 3vw;
+        padding-right: 3vw;
     }
 
     .lec_row {
@@ -667,43 +666,43 @@
             width: 70vw;
             max-width: none;
         }
-                        .info {
-                            padding: 6vw 0;
-                        }
-        
-                        .info_in {
-                            flex-wrap: wrap;
-                            align-items: flex-start;
-                            gap: 5vw;
-                        }
-        
-                        .info_l {
-                            flex: 1 1 auto;
-                        }
-        
-                        .info_logo {
-                            flex: 0 0 auto;
-                            justify-content: flex-end;
-                        }
-        
-                        .info_r {
-                            flex: 1 1 100%;
-                            order: 3;
-                            align-items: flex-start;
-                            text-align: left;
-                            gap: 2vw;
-                        }
-        
-                        .info_lbl {
-                            font-size: 3vw;
-                        }
-        
-                        .info_name {
-                            font-size: 4vw;
-                        }
-        
-                        .info_img {
-                            width: 35vw;
-                            max-width: none;
-                        }
+        .info {
+            padding: 6vw 0;
+        }
+
+        .info_in {
+            flex-wrap: wrap;
+            align-items: flex-start;
+            gap: 5vw;
+        }
+
+        .info_l {
+            flex: 1 1 auto;
+        }
+
+        .info_logo {
+            flex: 0 0 auto;
+            justify-content: flex-end;
+        }
+
+        .info_r {
+            flex: 1 1 100%;
+            order: 3;
+            align-items: flex-start;
+            text-align: left;
+            gap: 2vw;
+        }
+
+        .info_lbl {
+            font-size: 3vw;
+        }
+
+        .info_name {
+            font-size: 4vw;
+        }
+
+        .info_img {
+            width: 32vw;
+            max-width: none;
+        }
 }

@@ -1125,4 +1125,40 @@
     }
 }
 
+/* доп блок анимация наборника */
+
+.lec_txt .lec_body {
+    animation: txt_dissolve 4s ease-in-out infinite;
+    will-change: transform, opacity, filter;
+}
+
+.lec_txt .lec_body:nth-child(2) {
+    animation-delay: 1.2s;
+}
+
+@keyframes txt_dissolve {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+
+    45% {
+        opacity: 0.75;
+        transform: translateY(0.8vw);
+        filter: blur(0.6px);
+    }
+
+    70% {
+        opacity: 0.9;
+        transform: translateY(0.4vw);
+        filter: blur(0.3px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
 
