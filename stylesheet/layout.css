@@ -3,13 +3,18 @@
 }
 @font-face {
     font-family: "HelveticaBold";
+<<<<<<< HEAD
     src: url("./fonts/HelveticaBold.woff") format("woff");
+=======
+    src: url("../fonts/HelveticaBold.woff") format("woff");
+>>>>>>> ccfb77e8f9fbb07714dfe5d1cb6bae2c6d43edcc
     font-weight: 700;
     font-style: normal;
 }
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 
@@ -19,11 +24,11 @@ body {
     background-color: #101010;
     color: #ffffff;
     font-family: "Fira Code", monospace;
-
     font-synthesis: none;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+<<<<<<< HEAD
 .frame {
     border: 1px solid #ffffff;
 }
@@ -313,3 +318,6 @@ body {
     max-height: 70%;
     object-fit: contain;
 }
+=======
+
+>>>>>>> ccfb77e8f9fbb07714dfe5d1cb6bae2c6d43edcc
